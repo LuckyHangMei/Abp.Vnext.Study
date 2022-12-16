@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Hsl_Blog</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hsl_Blog.Domain.Shared\Hsl_Blog.Domain.Shared.csproj" />
+  </ItemGroup>
+	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Hsl_Blog.HttpApi.Hosting\Hsl_Blog.Application.Contracts.xml</DocumentationFile>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.ObjectExtending" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.Identity.Application.Contracts" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application.Contracts" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application.Contracts" Version="6.0.2" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Hsl_Blog</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\solution-items\Hsl_Blog.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hsl_Blog.Domain.Shared\Hsl_Blog.Domain.Shared.csproj" />
+  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Hsl_Blog.HttpApi.Hosting\Hsl_Blog.Domain.xml</DocumentationFile>
+	</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Emailing" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.OpenIddict.Domain" Version="6.0.2" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.OpenIddict" Version="6.0.2" />
+  </ItemGroup>
+
+</Project>

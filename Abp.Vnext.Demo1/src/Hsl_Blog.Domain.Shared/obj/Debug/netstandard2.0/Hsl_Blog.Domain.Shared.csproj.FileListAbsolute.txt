@@ -1,0 +1,10 @@
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\bin\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.deps.json
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\bin\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.dll
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\bin\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.pdb
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.csproj.AssemblyReference.cache
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.AssemblyInfoInputs.cache
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.AssemblyInfo.cs
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.csproj.CoreCompileInputs.cache
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.dll
+D:\MyFiles\MyselfGitProjects\Abp.Vnext.Demo\src\Hsl_Blog.Domain.Shared\obj\Debug\netstandard2.0\Hsl_Blog.Domain.Shared.pdb

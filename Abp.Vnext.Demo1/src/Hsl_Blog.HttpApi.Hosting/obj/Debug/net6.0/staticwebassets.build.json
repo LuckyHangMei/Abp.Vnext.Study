@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jW5AR6PLwGTa/9yL7um9UqOGnlbKBgowlm09QHDJ4VQ=",
+  "Source": "Hsl_Blog.HttpApi.Hosting",
+  "BasePath": "_content/Hsl_Blog.HttpApi.Hosting",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

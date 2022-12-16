@@ -1,0 +1,72 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net6.0": []
+  },
+  "packageFolders": {
+    "D:\\nuget\\packages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\MyFiles\\MyselfGitProjects\\Abp.Vnext.Demo\\src\\Hsl_Blog.BackgroundJobs\\Hsl_Blog.BackgroundJobs.csproj",
+      "projectName": "Hsl_Blog.BackgroundJobs",
+      "projectPath": "D:\\MyFiles\\MyselfGitProjects\\Abp.Vnext.Demo\\src\\Hsl_Blog.BackgroundJobs\\Hsl_Blog.BackgroundJobs.csproj",
+      "packagesPath": "D:\\nuget\\packages",
+      "outputPath": "D:\\MyFiles\\MyselfGitProjects\\Abp.Vnext.Demo\\src\\Hsl_Blog.BackgroundJobs\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "D:\\MyFiles\\MyselfGitProjects\\Abp.Vnext.Demo\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\MyProject\\NCXJ\\NcxjCommonComponent\\CommonComponentDll": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://repo.richisland.com/repository/nugetdev/": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
