@@ -24,9 +24,12 @@ namespace Hsl_Blog.Swagger
                     Title ="hsl的接口",
                     Description="接口描述"
                 });
-                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Hsl_Blog.HttpApi.xml"));
+                options.DocInclusionPredicate((docName, description) => true);
+                //options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Hsl_Blog.HttpApi.xml"));
+                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Hsl_Blog.Application.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Hsl_Blog.Domain.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Hsl_Blog.Application.Contracts.xml"));
+                options.CustomSchemaIds(type => type.FullName);
 
             });
         }

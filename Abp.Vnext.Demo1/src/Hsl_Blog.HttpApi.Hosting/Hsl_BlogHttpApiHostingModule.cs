@@ -20,6 +20,7 @@ namespace Hsl_Blog.HttpApi.Hosting
         {
             base.ConfigureServices(context);
         }
+ 
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
         {

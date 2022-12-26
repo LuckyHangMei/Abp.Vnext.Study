@@ -4,5 +4,139 @@
         <name>Hsl_Blog.Domain</name>
     </assembly>
     <members>
+        <member name="M:Hsl_Blog.Blog.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Hsl_Blog.Entity.PostTag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Blog.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Hsl_Blog.Entity.Tag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hsl_Blog.Configurations.AppSettings">
+            <summary>
+            appsettings.json配置文件数据读取类
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.AppSettings._config">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Configurations.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Configurations.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
+        <member name="T:Hsl_Blog.Entity.Category">
+            <summary>
+            分类表
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Category.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Hsl_Blog.Entity.FriendLink">
+            <summary>
+            友情链接表
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.FriendLink.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.FriendLink.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="T:Hsl_Blog.Entity.Post">
+            <summary>
+            发表文章表
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Post.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Hsl_Blog.Entity.PostTag">
+            <summary>
+            文章对应标签表
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.PostTag.PostId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.PostTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="T:Hsl_Blog.Entity.Tag">
+            <summary>
+            标签表
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Hsl_Blog.Entity.Tag.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
     </members>
 </doc>

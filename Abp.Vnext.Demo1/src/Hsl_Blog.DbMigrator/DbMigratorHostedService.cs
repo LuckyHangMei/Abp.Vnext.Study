@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Hsl_Blog.Data;
 using Serilog;
 using Volo.Abp;
 
@@ -22,6 +21,7 @@ public class DbMigratorHostedService : IHostedService
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
+        /*
         using (var application = await AbpApplicationFactory.CreateAsync<Hsl_BlogDbMigratorModule>(options =>
         {
            options.Services.ReplaceConfiguration(_configuration);
@@ -39,7 +39,7 @@ public class DbMigratorHostedService : IHostedService
             await application.ShutdownAsync();
 
             _hostApplicationLifetime.StopApplication();
-        }
+        }*/
     }
 
     public Task StopAsync(CancellationToken cancellationToken)

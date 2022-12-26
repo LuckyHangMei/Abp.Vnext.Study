@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hsl_Blog.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,15 @@ namespace Hsl_Blog.EntityFrameworkCore
     [ConnectionStringName("MySql")]
     public class Hsl_BlogDbContext : AbpDbContext<Hsl_BlogDbContext>
     {
+        public DbSet<Post> Posts { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Tag> Tags { get; set; }
+
+        public DbSet<PostTag> PostTags { get; set; }
+         
+        public DbSet<FriendLink> FriendLinks { get; set; }
         public Hsl_BlogDbContext(DbContextOptions<Hsl_BlogDbContext> options) : base(options)
         {
         }

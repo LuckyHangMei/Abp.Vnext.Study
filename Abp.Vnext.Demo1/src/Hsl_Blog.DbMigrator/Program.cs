@@ -36,6 +36,6 @@ class Program
             .ConfigureLogging((context, logging) => logging.ClearProviders())
             .ConfigureServices((hostContext, services) =>
             {
-                services.AddHostedService<DbMigratorHostedService>();
+                //services.AddHostedService<DbMigratorHostedService>();
             });
 }

@@ -5,14 +5,18 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Hsl_Blog</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
-
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Hsl_Blog.HttpApi.Hosting\Hsl_Blog.Application.xml</DocumentationFile>
+	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hsl_Blog.Domain\Hsl_Blog.Domain.csproj" />
     <ProjectReference Include="..\Hsl_Blog.Application.Contracts\Hsl_Blog.Application.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="5.0.0" />
     <PackageReference Include="Volo.Abp.Account.Application" Version="6.0.2" />
     <PackageReference Include="Volo.Abp.Identity.Application" Version="6.0.2" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="6.0.2" />
