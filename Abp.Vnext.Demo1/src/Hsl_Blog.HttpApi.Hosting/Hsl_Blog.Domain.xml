@@ -38,6 +38,56 @@
             ConnectionStrings
             </summary>
         </member>
+        <member name="T:Hsl_Blog.Configurations.GitHubConfig">
+             <summary>
+             分析一下，我们接入GitHub身份认证授权整个流程下来分以下几步
+            根据参数生成GitHub重定向的地址，跳转到GitHub登录页，进行登录
+            登录成功之后会跳转到我们的回调地址，回调地址会携带code参数
+            拿到code参数，就可以换取到access_token
+            有了access_token，可以调用GitHub获取用户信息的接口，得到当前登录成功的用户信息
+            开始之前，先将GitHub的API简单处理一下。
+             </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.API_Authorize">
+            <summary>
+            GET请求，跳转GitHub登录界面，获取用户授权，得到code
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.API_AccessToken">
+            <summary>
+            POST请求，根据code得到access_token
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.API_User">
+            <summary>
+            GET请求，根据access_token得到用户信息
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.UserId">
+            <summary>
+            Github UserId
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.Client_ID">
+            <summary>
+            Client ID
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.Client_Secret">
+            <summary>
+            Client Secret
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.Redirect_Uri">
+            <summary>
+            Authorization callback URL
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.Configurations.GitHubConfig.ApplicationName">
+            <summary>
+            Application name
+            </summary>
+        </member>
         <member name="T:Hsl_Blog.Entity.Category">
             <summary>
             分类表

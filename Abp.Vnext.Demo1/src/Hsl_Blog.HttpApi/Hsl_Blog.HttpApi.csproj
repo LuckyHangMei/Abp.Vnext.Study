@@ -7,7 +7,9 @@
     <RootNamespace>Hsl_Blog</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
-
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Hsl_Blog.HttpApi.Hosting\Hsl_Blog.HttpApi.xml</DocumentationFile>
+	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hsl_Blog.Application.Contracts\Hsl_Blog.Application.Contracts.csproj" />
     <ProjectReference Include="..\Hsl_Blog.Application\Hsl_Blog.Application.csproj" />

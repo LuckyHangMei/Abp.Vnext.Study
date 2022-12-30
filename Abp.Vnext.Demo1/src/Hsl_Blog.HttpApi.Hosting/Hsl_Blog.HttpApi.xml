@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hsl_Blog.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="M:Hsl_Blog.Controllers.AuthController.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Controllers.AuthController.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Controllers.AuthController.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Controllers.BlogController.InSertPost(Hsl_Blog.Blog.PostDto)">
+            <summary>
+            新建博客
+            </summary>
+            <param name="dto">博客信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Controllers.BlogController.QueryPostsAsync(System.Int32)">
+            <summary>
+            分页查询文章列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Controllers.BlogController.Delete(System.Int32)">
+            <summary>
+            删除指定博客
+            </summary>
+            <param name="id">博客唯一标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Hsl_BlogHttpApiModule.ConfigureAutoApiControllers">
+            <summary>
+            自动生成api控制器
+            </summary>
+        </member>
+    </members>
+</doc>
