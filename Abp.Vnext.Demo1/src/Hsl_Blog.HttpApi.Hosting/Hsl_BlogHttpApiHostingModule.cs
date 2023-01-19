@@ -1,5 +1,6 @@
 ﻿using Hsl_Blog.Configurations;
 using Hsl_Blog.EntityFrameworkCore;
+using Hsl_Blog.HttpApi.Hosting.Middleware;
 using Hsl_Blog.Swagger;
 using Hsl_Blog.ToolKits.Base;
 using Hsl_Blog.ToolKits.Extensions;
@@ -80,6 +81,8 @@ namespace Hsl_Blog.HttpApi.Hosting
             var app = context.GetApplicationBuilder();
             var env = context.GetEnvironment();
 
+            // // 异常处理中间件
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
             // 环境变量，开发环境
             if (env.IsDevelopment())
             {
