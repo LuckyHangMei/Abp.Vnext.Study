@@ -396,4 +396,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/Abp.Vnext.Demo1/src/Hsl_Blog.Application.Contracts/obj/Hsl_Blog.Application.Contracts.csproj.nuget.g.props

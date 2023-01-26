@@ -4,5 +4,30 @@
         <name>Hsl_Blog.HttpApi.Hosting</name>
     </assembly>
     <members>
+        <member name="T:Hsl_Blog.HttpApi.Hosting.Middleware.ExceptionHandlerMiddleware">
+            <summary>
+            异常中间件
+            </summary>
+        </member>
+        <member name="F:Hsl_Blog.HttpApi.Hosting.Middleware.ExceptionHandlerMiddleware._next">
+            <summary>
+            RequestDelegate是一种请求委托类型，用来处理HTTP请求的函数，返回的是delegate，
+            </summary>
+        </member>
+        <member name="M:Hsl_Blog.HttpApi.Hosting.Middleware.ExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invoke
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.HttpApi.Hosting.Middleware.ExceptionHandlerMiddleware.ExceptionHandlerAsync(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            异常处理，返回JSON
+            </summary>
+            <param name="context"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

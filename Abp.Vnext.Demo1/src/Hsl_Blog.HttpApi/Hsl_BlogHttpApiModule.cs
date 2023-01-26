@@ -23,8 +23,8 @@ public class Hsl_BlogHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        ConfigureAutoApiControllers();
-        ConfigureLocalization();
+       // ConfigureAutoApiControllers();
+        //ConfigureLocalization();
     }
     #region 
     /// <summary>

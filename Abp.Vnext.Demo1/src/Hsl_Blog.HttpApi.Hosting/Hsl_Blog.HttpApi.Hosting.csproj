@@ -24,9 +24,13 @@
 		<DocumentationFile>..\Hsl_Blog.HttpApi.Hosting\Hsl_Blog.HttpApi.Hosting.xml</DocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
+		<Compile Remove="Controllers\**" />
 		<Compile Remove="Logs\**" />
+		<Content Remove="Controllers\**" />
 		<Content Remove="Logs\**" />
+		<EmbeddedResource Remove="Controllers\**" />
 		<EmbeddedResource Remove="Logs\**" />
+		<None Remove="Controllers\**" />
 		<None Remove="Logs\**" />
 	</ItemGroup>
 
@@ -40,6 +44,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.12" />
 		<PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
 		<PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
 	</ItemGroup>
@@ -59,10 +64,6 @@
 		<PackageReference Include="Volo.Abp.Account.Web.OpenIddict" Version="6.0.2" />
 		<PackageReference Include="Volo.Abp.TenantManagement.Web" Version="6.0.2" />
 		<PackageReference Include="Volo.Abp.SettingManagement.Web" Version="6.0.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Controllers\" />
 	</ItemGroup>
 
 </Project>

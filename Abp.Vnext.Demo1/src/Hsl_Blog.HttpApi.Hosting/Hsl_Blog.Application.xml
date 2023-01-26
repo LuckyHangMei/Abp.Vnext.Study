@@ -4,6 +4,39 @@
         <name>Hsl_Blog.Application</name>
     </assembly>
     <members>
+        <member name="M:Hsl_Blog.Authorize.IAuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Authorize.IAuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Authorize.IAuthorizeService.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Authorize.Impl.AuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hsl_Blog.Authorize.Impl.AuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:Hsl_Blog.Blog.PostDto.Title">
             <summary>
             标题
