@@ -31,15 +31,15 @@ namespace Hsl_Blog.Authorize.Impl
         private readonly JwtBearerOptions _jwtBearerOptions;
         public AuthorizeService(IHttpClientFactory httpClient, SigningCredentials signingCredentials, IOptionsSnapshot<JwtBearerOptions> jwtBearerOptions, IDistributedCache distributedCache)
         {
-            _httpClient=httpClient;
-            _distributedCache=distributedCache;
-            _signingCredentials=signingCredentials;
+            _httpClient = httpClient;
+            _distributedCache = distributedCache;
+            _signingCredentials = signingCredentials;
             _jwtBearerOptions = jwtBearerOptions.Get(JwtBearerDefaults.AuthenticationScheme);
 
         }
         public async Task<ServiceResult<string>> GenerateTokenAsync(string access_token)
         {
-           var result =new ServiceResult<string>();
+            var result = new ServiceResult<string>();
             if (string.IsNullOrEmpty(access_token))
             {
                 result.IsFailed("access_token为空");
@@ -70,7 +70,7 @@ namespace Hsl_Blog.Authorize.Impl
                 result.IsFailed("当前账号未授权");
                 return result;
             }
-            var claims = new[] { 
+            var claims = new[] {
                 new Claim(ClaimTypes.Name,user.Name!=null?user.Name:"ceshi"),
                 new Claim(ClaimTypes.Email, user.Email!=null?user.Email:"2313124@qq.com"),
                 new Claim(JwtRegisteredClaimNames.Exp, $"{new DateTimeOffset(DateTime.Now.AddMinutes(AppSettings.JWT.Expires)).ToUnixTimeSeconds()}"),
@@ -80,12 +80,12 @@ namespace Hsl_Blog.Authorize.Impl
             var key = new SymmetricSecurityKey(AppSettings.JWT.SecurityKey.SerializeUtf8());
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var securityToken = new JwtSecurityToken(
-                                    issuer:AppSettings.JWT.Domain,
-                                    audience:AppSettings.JWT.Domain,
-                                    claims:claims,
-                                    expires:DateTime.Now.AddMinutes(AppSettings.JWT.Expires),
+                                    issuer: AppSettings.JWT.Domain,
+                                    audience: AppSettings.JWT.Domain,
+                                    claims: claims,
+                                    expires: DateTime.Now.AddMinutes(AppSettings.JWT.Expires),
                                     signingCredentials: creds);
-            var token=new JwtSecurityTokenHandler().WriteToken(securityToken);
+            var token = new JwtSecurityTokenHandler().WriteToken(securityToken);
             result.IsSuccess(token);
             return await Task.FromResult(result);
 
@@ -149,8 +149,8 @@ namespace Hsl_Blog.Authorize.Impl
         {
             var result = new AuthTokenDto();
             //先创建refresh token
-            var (refreshTokenId,refreshToken)=await CreateRefreshTokenAsync(user.Id);
-            result.AccessToken=refreshToken;
+            var (refreshTokenId, refreshToken) = await CreateRefreshTokenAsync(user.Id);
+            result.RefreshToken = refreshToken;
             // 再签发Jwt
             result.AccessToken = CreateJwtToken(user, refreshTokenId);
             return result;
@@ -158,7 +158,7 @@ namespace Hsl_Blog.Authorize.Impl
         private string CreateJwtToken(UserDto user, string refreshTokenId)
         {
             if (user is null) throw new ArgumentNullException(nameof(user));
-            if(string.IsNullOrEmpty(refreshTokenId))throw new ArgumentNullException(nameof(refreshTokenId));
+            if (string.IsNullOrEmpty(refreshTokenId)) throw new ArgumentNullException(nameof(refreshTokenId));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -169,9 +169,9 @@ namespace Hsl_Blog.Authorize.Impl
                           new Claim(RefreshTokenIdClaimType, refreshTokenId)
                 }),
                 Issuer = "hsl",
-                Audience ="hsl",
+                Audience = "hsl",
                 Expires = DateTime.UtcNow.AddMinutes(30),
-                SigningCredentials= _signingCredentials
+                SigningCredentials = _signingCredentials
             };
 
             var handler = _jwtBearerOptions.SecurityTokenValidators.OfType<JwtSecurityTokenHandler>().FirstOrDefault()
@@ -206,7 +206,7 @@ namespace Hsl_Blog.Authorize.Impl
             return $"{userId}:{refreshTokenId}";
         }
 
-        public  Task<AuthTokenDto> RefreshAuthTokenAsync(AuthTokenDto token)
+        public Task<AuthTokenDto> RefreshAuthTokenAsync(AuthTokenDto token)
         {
             throw new NotImplementedException();
         }
