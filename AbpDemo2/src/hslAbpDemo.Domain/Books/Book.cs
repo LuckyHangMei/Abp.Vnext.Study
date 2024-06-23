@@ -1,8 +1,7 @@
 ﻿using System;
-using hslAbpDemo.Books;
 using Volo.Abp.Domain.Entities.Auditing;
 
-namespace hslAbpDemo;
+namespace hslAbpDemo.Books;
 
 public class Book:AuditedAggregateRoot<Guid>
 {
@@ -12,5 +11,5 @@ public class Book:AuditedAggregateRoot<Guid>
 
     public DateTime PublishDate { get; set; }
 
-    public float Price { get; set; }    
+    public float Price { get; set; }
 }

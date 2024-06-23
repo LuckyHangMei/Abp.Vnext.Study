@@ -256,7 +256,7 @@ src/hslAbpDemo.Web/Logs/*
 src/hslAbpDemo.Web.Host/Logs/*
 src/hslAbpDemo.AuthServer/Logs/*
 src/hslAbpDemo.HttpApi.Host/Logs/*
-src/hslAbpDemo.HttpApi.HostWithIds/Logs/*
+src/hslAbpDemo.HttpApi.Host/Logs/*
 src/hslAbpDemo.DbMigrator/Logs/*
 src/hslAbpDemo.Blazor.Server/Logs/*
 src/hslAbpDemo.Blazor.Server.Tiered/Logs/*

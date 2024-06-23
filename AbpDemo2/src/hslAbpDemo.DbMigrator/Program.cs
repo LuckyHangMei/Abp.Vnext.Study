@@ -8,9 +8,7 @@ using Serilog;
 using Serilog.Events;
 
 namespace hslAbpDemo.DbMigrator;
-/// <summary>
-/// .DbMigrator 是一个控制台使用程序,可以在开发和生产环境迁移数据库架构和初始化种子数据.
-/// </summary>
+
 class Program
 {
     static async Task Main(string[] args)

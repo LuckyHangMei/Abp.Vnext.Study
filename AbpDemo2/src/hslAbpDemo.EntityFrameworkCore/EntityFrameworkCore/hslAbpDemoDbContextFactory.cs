@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace hslAbpDemo.EntityFrameworkCore;
 
@@ -16,8 +17,9 @@ public class hslAbpDemoDbContextFactory : IDesignTimeDbContextFactory<hslAbpDemo
 
         var configuration = BuildConfiguration();
 
-        var builder = new DbContextOptionsBuilder<hslAbpDemoDbContext>()
-            .UseMySql(configuration.GetConnectionString("Default"), MySqlServerVersion.LatestSupportedServerVersion);//MySqlServerVersion.LatestSupportedServerVersion MySqlServerVersion.Parse("8.0.27")
+         var builder = new DbContextOptionsBuilder<hslAbpDemoDbContext>()
+            .UseMySql(configuration.GetConnectionString("Default"),ServerVersion.Create(Version.Parse("8.0.29"),ServerType.MySql));
+
 
         return new hslAbpDemoDbContext(builder.Options);
     }

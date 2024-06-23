@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using hslAbpDemo.Books;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -27,14 +27,6 @@ public class hslAbpDemoDbContext :
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
 
-    #region 自己封装的业务代码
-
-    public DbSet<TodoItem> TodoItem { get; set; }
-    public DbSet<Book> Books { get; set; }
-    
-    #endregion
-                
-    
     #region Entities from the modules
 
     /* Notice: We only implemented IIdentityDbContext and ITenantManagementDbContext
@@ -63,6 +55,11 @@ public class hslAbpDemoDbContext :
 
     #endregion
 
+    #region 自定义的实体
+    public DbSet<Book> Books { get; set; }
+    
+
+    #endregion
     public hslAbpDemoDbContext(DbContextOptions<hslAbpDemoDbContext> options)
         : base(options)
     {
@@ -93,14 +90,10 @@ public class hslAbpDemoDbContext :
         //    //...
         //});
 
-        builder.Entity<TodoItem>(b =>
-        {
-            b.ToTable("TodoItems");
-        });
         builder.Entity<Book>(b =>
         {
-            b.ToTable(hslAbpDemoConsts.DbTablePrefix + "Books");
-            b.ConfigureByConvention();//auto configure for the base class props.方法优雅的配置/映射继承的属性,应对所有的实体使用它.
+            b.ToTable(hslAbpDemoConsts.DbTablePrefix + "Book", hslAbpDemoConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
             b.Property(x => x.Name).IsRequired().HasMaxLength(128);
         });
     }
